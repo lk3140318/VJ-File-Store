@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 app = Client("file_store_bot", api_id="YOUR_API_ID", api_hash="YOUR_API_HASH", bot_token="YOUR_BOT_TOKEN")
 
 # चैनल ID (रिपोर्टिंग चैनल का username या ID)
-FORCE_SUB_CHANNEL = "@your_channel_username"
+FORCE_SUB_CHANNEL = "-1002283082938"
 
 @app.on_message(filters.command(["start"]))
 async def start_command(client, message):
