@@ -15,7 +15,7 @@ mongo_db = mongo_client["cloned_vjbotz"]
 
 @Client.on_message(filters.command("clone") & filters.private)
 async def clone(client, message):
-    if CLONE_MODE == False:
+    if CLONE_MODE == True:
         return 
     techvj = await client.ask(message.chat.id, "<b>1) sᴇɴᴅ <code>/newbot</code> ᴛᴏ @BotFather\n2) ɢɪᴠᴇ ᴀ ɴᴀᴍᴇ ꜰᴏʀ ʏᴏᴜʀ ʙᴏᴛ.\n3) ɢɪᴠᴇ ᴀ ᴜɴɪǫᴜᴇ ᴜsᴇʀɴᴀᴍᴇ.\n4) ᴛʜᴇɴ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ ᴀ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ʏᴏᴜʀ ʙᴏᴛ ᴛᴏᴋᴇɴ.\n5) ꜰᴏʀᴡᴀʀᴅ ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴍᴇ.\n\n/cancel - ᴄᴀɴᴄᴇʟ ᴛʜɪs ᴘʀᴏᴄᴇss.</b>")
     if techvj.text == '/cancel':
@@ -53,7 +53,7 @@ async def clone(client, message):
 
 @Client.on_message(filters.command("deletecloned") & filters.private)
 async def delete_cloned_bot(client, message):
-    if CLONE_MODE == False:
+    if CLONE_MODE == True:
         return 
     try:
         techvj = await client.ask(message.chat.id, "**Send Me Bot Token To Delete**")
